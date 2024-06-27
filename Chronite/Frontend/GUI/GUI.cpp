@@ -28,7 +28,7 @@ void ImGui::ShowLoader(bool* p_open)
 	SetNextWindowSize(ImVec2(535, 320), ImGuiCond_FirstUseEver);
 
 
-	if (!Begin("Neonite++", p_open, window_flags))
+	if (!Begin("Neocommunism++", p_open, window_flags))
 	{
 		End();
 		return;
@@ -36,7 +36,7 @@ void ImGui::ShowLoader(bool* p_open)
 
 	PushItemWidth(GetFontSize() * -12);
 
-	if (BeginTabBar("Neonite"), ImGuiTabBarFlags_AutoSelectNewTabs)
+	if (BeginTabBar("Neocommunism"), ImGuiTabBarFlags_AutoSelectNewTabs)
 	{
 		if (BeginTabItem("Main"))
 		{
@@ -104,7 +104,7 @@ void ImGui::ShowLoader(bool* p_open)
 
 			SameLine(GetWindowWidth() - 390);
 
-			InputTextWithHint(" ", "Fortnite Path (Optional)", path, sizeof(path));
+			InputTextWithHint(" ", "Fortcommunism Path (Optional)", path, sizeof(path));
 
 			SameLine(GetWindowWidth() - 100);
 
@@ -160,7 +160,7 @@ void ImGui::ShowLoader(bool* p_open)
 		SetCursorPosX(GetCursorPosX() + 50);
 		SetCursorPosY(GetCursorPosY() + 5);
 
-		Text(XOR("Kemo (@xkem0x): Developer and mantainer of Neonite++"));
+		Text(XOR("Kemo (@xkem0x): Developer and mantainer of Neocommunism++"));
 
 		SetCursorPosX(GetCursorPosX() + 50);
 		SetCursorPosY(GetCursorPosY() + 5);
@@ -202,13 +202,13 @@ void ImGui::ShowLoader(bool* p_open)
 	{
 		bool EACisTermed;
 		bool LauncherisTermed;
-		DWORD FortniteLauncherPID;
+		DWORD FortcommunismLauncherPID;
 		DWORD eacPID;
 
 		while (true)
 		{
 			//making sure all processes are terminated
-			eacPID = util::GetProcId("FortniteClient-Win64-Shipping_EAC.exe");
+			eacPID = util::GetProcId("FortcommunismClient-Win64-Shipping_EAC.exe");
 
 			if (eacPID != 0)
 			{
@@ -222,14 +222,14 @@ void ImGui::ShowLoader(bool* p_open)
 				EACisTermed = true;
 			}
 
-			FortniteLauncherPID = util::GetProcId("FortniteLauncher.exe");
+			FortcommunismLauncherPID = util::GetProcId("FortcommunismLauncher.exe");
 
-			if (FortniteLauncherPID != GetCurrentProcessId())
+			if (FortcommunismLauncherPID != GetCurrentProcessId())
 			{
-				HANDLE Launcher = OpenProcess(PROCESS_TERMINATE, false, FortniteLauncherPID);
+				HANDLE Launcher = OpenProcess(PROCESS_TERMINATE, false, FortcommunismLauncherPID);
 
 				TerminateProcess(Launcher, 0);
-				FortniteLauncherPID = 0;
+				FortcommunismLauncherPID = 0;
 			}
 			else
 			{

@@ -202,7 +202,7 @@
     <ClInclude Include="kismet.h" />
     <ClInclude Include="minhook\MinHook.h" />
     <ClInclude Include="mods.h" />
-    <ClInclude Include="neonitelogo.h" />
+    <ClInclude Include="neocommunismlogo.h" />
     <ClInclude Include="neoroyale.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="pch.h" />

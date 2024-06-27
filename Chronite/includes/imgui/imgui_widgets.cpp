@@ -5167,7 +5167,7 @@ bool ImGui::ColorEdit4(const char* label, float col[4],
 					fmt_table_int[fmt_idx][n]);
 			}
 			if (!(flags & ImGuiColorEditFlags_NoOptions))
-				OpenPopupOnItemClick("context");
+				OpenPopupOcommunismmClick("context");
 		}
 	}
 	else if ((flags & ImGuiColorEditFlags_DisplayHex) != 0 && (
@@ -5200,7 +5200,7 @@ bool ImGui::ColorEdit4(const char* label, float col[4],
 					(unsigned int*)&i[2]);
 		}
 		if (!(flags & ImGuiColorEditFlags_NoOptions))
-			OpenPopupOnItemClick("context");
+			OpenPopupOcommunismmClick("context");
 	}
 
 	ImGuiWindow* picker_active_window = NULL;
@@ -5219,7 +5219,7 @@ bool ImGui::ColorEdit4(const char* label, float col[4],
 			}
 		}
 		if (!(flags & ImGuiColorEditFlags_NoOptions))
-			OpenPopupOnItemClick("context");
+			OpenPopupOcommunismmClick("context");
 
 		if (BeginPopup("picker")) {
 			picker_active_window = g.CurrentWindow;
@@ -5522,7 +5522,7 @@ bool ImGui::ColorPicker4(const char* label, float col[4],
 			}
 		}
 		if (!(flags & ImGuiColorEditFlags_NoOptions))
-			OpenPopupOnItemClick("context");
+			OpenPopupOcommunismmClick("context");
 	}
 	else if (flags & ImGuiColorEditFlags_PickerHueBar) {
 		// SV rectangle logic
@@ -5534,7 +5534,7 @@ bool ImGui::ColorPicker4(const char* label, float col[4],
 			value_changed = value_changed_sv = true;
 		}
 		if (!(flags & ImGuiColorEditFlags_NoOptions))
-			OpenPopupOnItemClick("context");
+			OpenPopupOcommunismmClick("context");
 
 		// Hue bar logic
 		SetCursorScreenPos(ImVec2(bar0_pos_x, picker_pos.y));

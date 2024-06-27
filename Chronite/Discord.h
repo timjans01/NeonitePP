@@ -19,12 +19,12 @@ static void UpdateDiscord()
 	static int64_t StartTime = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
 	memset(&discordPresence, 0, sizeof(discordPresence));
-	discordPresence.state = "Using Neonite";
+	discordPresence.state = "Using Neocommunism";
 	discordPresence.details = "In Launcher";
 	discordPresence.startTimestamp = StartTime;
 	discordPresence.endTimestamp = NULL;
 	discordPresence.largeImageKey = "big-image";
-	discordPresence.largeImageText = "Neonite";
+	discordPresence.largeImageText = "Neocommunism";
 	discordPresence.instance = 1;
 
 	Discord_UpdatePresence(&discordPresence);

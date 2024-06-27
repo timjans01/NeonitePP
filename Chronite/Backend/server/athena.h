@@ -10,7 +10,7 @@ R"(
   "wipeNumber": 1,
   "accountId": "",
   "profileId": "athena",
-  "version": "neonite++",
+  "version": "neocommunism++",
   "items": {
     "sandbox_loadout": {
       "templateId": "CosmeticLocker:cosmeticlocker_athena",

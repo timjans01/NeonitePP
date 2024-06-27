@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
@@ -111,7 +111,7 @@ public:
 
 	auto StartSkydiving(float height)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawnAthena.TeleportToSkyDive"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawnAthena.TeleportToSkyDive"));
 
 		AFortPlayerPawnAthena_TeleportToSkyDive_Params params;
 		params.HeightAboveGround = height;
@@ -161,7 +161,7 @@ public:
 
 	auto IsSkydiving()
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawn.IsSkydiving"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawn.IsSkydiving"));
 
 		ACharacter_IsSkydiving_Params params;
 
@@ -172,7 +172,7 @@ public:
 
 	auto IsParachuteOpen()
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawn.IsParachuteOpen"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawn.IsParachuteOpen"));
 
 		ACharacter_IsParachuteOpen_Params params;
 
@@ -183,7 +183,7 @@ public:
 
 	auto IsParachuteForcedOpen()
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawn.IsParachuteForcedOpen"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawn.IsParachuteForcedOpen"));
 
 		ACharacter_IsParachuteForcedOpen_Params params;
 
@@ -245,7 +245,7 @@ public:
 		 */
 
 		auto CharacterParts = reinterpret_cast<TArray<UObject*>*>(reinterpret_cast<uintptr_t>(Hero) + ObjectFinder::FindOffset(
-			XOR(L"Class /Script/FortniteGame.FortHero"), XOR(L"CharacterParts")));
+			XOR(L"Class /Script/FortcommunismGame.FortHero"), XOR(L"CharacterParts")));
 
 
 		if (SkinOverride == L"Thanos")
@@ -270,8 +270,8 @@ public:
 
 #endif
 
-		auto KismetLib = UE4::FindObject<UObject*>(XOR(L"FortKismetLibrary /Script/FortniteGame.Default__FortKismetLibrary"));
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortKismetLibrary.ApplyCharacterCosmetics"));
+		auto KismetLib = UE4::FindObject<UObject*>(XOR(L"FortKismetLibrary /Script/FortcommunismGame.Default__FortKismetLibrary"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortKismetLibrary.ApplyCharacterCosmetics"));
 
 		UFortKismetLibrary_ApplyCharacterCosmetics_Params params;
 		params.WorldContextObject = WorldFinder.GetObj();
@@ -288,8 +288,8 @@ public:
 		ObjectFinder PawnFinder = ObjectFinder::EntryPoint(uintptr_t(this->Pawn));
 		ObjectFinder PlayerStateFinder = PawnFinder.Find(XOR(L"PlayerState"));
 
-		auto KismetLib = UE4::FindObject<UObject*>(XOR(L"FortKismetLibrary /Script/FortniteGame.Default__FortKismetLibrary"));
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortKismetLibrary.UpdatePlayerCustomCharacterPartsVisualization"));
+		auto KismetLib = UE4::FindObject<UObject*>(XOR(L"FortKismetLibrary /Script/FortcommunismGame.Default__FortKismetLibrary"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortKismetLibrary.UpdatePlayerCustomCharacterPartsVisualization"));
 
 		UFortKismetLibrary_UpdatePlayerCustomCharacterPartsVisualization_Params params;
 		params.PlayerState = PlayerStateFinder.GetObj();
@@ -300,7 +300,7 @@ public:
 
 	auto PickupActor(UObject* PlacementDecoItemDefinition, UObject* PickupTarget = nullptr)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.PickUpActor"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.PickUpActor"));
 
 		PickupActor_Params params;
 		params.PickupTarget = PickupTarget;
@@ -317,7 +317,7 @@ public:
 		GUID.C = guid;
 		GUID.D = guid;
 
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.EquipWeaponDefinition"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.EquipWeaponDefinition"));
 
 		std::wstring WeaponName = weaponname;
 
@@ -333,9 +333,9 @@ public:
 			{
 				if (objectName.starts_with(L"AthenaGadget"))
 				{
-					auto FUN_weapondef = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortGadgetItemDefinition.GetWeaponItemDefinition"));
+					auto FUN_weapondef = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortGadgetItemDefinition.GetWeapocommunismmDefinition"));
 
-					UFortGadgetItemDefinition_GetWeaponItemDefinition_Params prm_ReturnValue;
+					UFortGadgetItemDefinition_GetWeapocommunismmDefinition_Params prm_ReturnValue;
 
 					ProcessEvent(WeaponData, FUN_weapondef, &prm_ReturnValue);
 
@@ -375,7 +375,7 @@ public:
 		if (EmoteDef && !Util::IsBadReadPtr(EmoteDef))
 		{
 			//Emote Def is valid, now we grab the animation montage
-			auto FUNC_GetAnimationHardReference = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortMontageItemDefinitionBase.GetAnimationHardReference"));
+			auto FUNC_GetAnimationHardReference = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortMontageItemDefinitionBase.GetAnimationHardReference"));
 
 			UFortMontageItemDefinitionBase_GetAnimationHardReference_Params GetAnimationHardReference_Params;
 			GetAnimationHardReference_Params.BodyType = EFortCustomBodyType::All;
@@ -456,7 +456,7 @@ public:
 
 	auto SetHealth(float SetHealthInput)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.SetHealth"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.SetHealth"));
 
 		AFortPawn_SetHealth_Params params;
 
@@ -467,7 +467,7 @@ public:
 
 	auto SetShield(float SetShieldInput)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.SetShield"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.SetShield"));
 
 		AFortPawn_SetShield_Params params;
 
@@ -478,7 +478,7 @@ public:
 
 	auto SetMaxHealth(float SetMaxHealthInput)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.SetMaxHealth"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.SetMaxHealth"));
 
 		AFortPawn_SetMaxHealth_Params params;
 
@@ -489,7 +489,7 @@ public:
 
 	auto SetMaxShield(float SetMaxShieldInput)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.SetMaxShield"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.SetMaxShield"));
 
 		AFortPawn_SetMaxShield_Params params;
 
@@ -500,7 +500,7 @@ public:
 
 	auto SetMovementSpeed(float SetMovementSpeedInput)
 	{
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPawn.SetMovementSpeed"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPawn.SetMovementSpeed"));
 
 		AFortPawn_SetMovementSpeedMultiplier_Params params;
 
@@ -509,23 +509,23 @@ public:
 		ProcessEvent(this->Pawn, fn, &params);
 	}
 
-	auto ToggleInfiniteAmmo()
+	auto ToggleInficommunismAmmo()
 	{
 		if (!this->Controller || Util::IsBadReadPtr(this->Controller))
 		{
 			UpdatePlayerController();
 		}
 
-		auto bEnableVoiceChatPTTOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortniteGame.FortPlayerController"), XOR(L"bEnableVoiceChatPTT"));
+		auto bEnableVoiceChatPTTOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortcommunismGame.FortPlayerController"), XOR(L"bEnableVoiceChatPTT"));
 
-		// TECHNICAL EXPLINATION: (kemo) We are doing this because InfiniteAmmo bool and some other bools live in the same offset
+		// TECHNICAL EXPLINATION: (kemo) We are doing this because InficommunismAmmo bool and some other bools live in the same offset
 		// the offset has 8 bits (a bitfield), bools are only one bit as it's only 0\1 so we have a struct with 8 bools (1 byte) to be able to edit that specific bool
-		auto PlayerControllerBools = reinterpret_cast<PlayerControllerBoolsForInfiniteAmmo*>(reinterpret_cast<uintptr_t>(this->Controller) + bEnableVoiceChatPTTOffset);
+		auto PlayerControllerBools = reinterpret_cast<PlayerControllerBoolsForInficommunismAmmo*>(reinterpret_cast<uintptr_t>(this->Controller) + bEnableVoiceChatPTTOffset);
 
-		PlayerControllerBools->bInfiniteAmmo = true;
-		PlayerControllerBools->bInfiniteMagazine = true;
+		PlayerControllerBools->bInficommunismAmmo = true;
+		PlayerControllerBools->bInficommunismMagazine = true;
 
-		printf(XOR("\n[NeoRoyale] You should have infinite ammo now!\n"));
+		printf(XOR("\n[NeoRoyale] You should have inficommunism ammo now!\n"));
 	}
 
 	auto Skydive()
@@ -533,12 +533,12 @@ public:
 		/*
 		if (this->IsSkydiving())
 		{
-			auto fn =UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawn.EndSkydiving"));
+			auto fn =UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawn.EndSkydiving"));
 
 			ProcessEvent(this->Pawn, fn, nullptr);
 		}*/
 
-		/*auto fn =UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawn.BeginSkydiving"));
+		/*auto fn =UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawn.BeginSkydiving"));
 
 		AFortPlayerPawn_BeginSkydiving_Params params;
 		params.bFromBus = true;
@@ -551,7 +551,7 @@ public:
 	auto ForceOpenParachute()
 	{
 		/*
-		auto fn =UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerPawn.BP_ForceOpenParachute"));
+		auto fn =UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerPawn.BP_ForceOpenParachute"));
 
 		Empty_Params params;
 
@@ -567,7 +567,7 @@ public:
 			UpdatePlayerController();
 		}
 
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerController.IsInAircraft"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerController.IsInAircraft"));
 		ACharacter_IsInAircraft_Params params;
 
 		ProcessEvent(this->Controller, fn, &params);
@@ -603,7 +603,7 @@ public:
 			UpdatePlayerController();
 		}
 
-		auto CosmeticLoadoutPCOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortniteGame.FortPlayerController"), XOR(L"CosmeticLoadoutPC"));
+		auto CosmeticLoadoutPCOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortcommunismGame.FortPlayerController"), XOR(L"CosmeticLoadoutPC"));
 
 		auto CosmeticLoadoutPC = reinterpret_cast<FFortAthenaLoadout*>(reinterpret_cast<uintptr_t>(this->Controller) + CosmeticLoadoutPCOffset);
 

@@ -30,7 +30,7 @@ LogContentBeacon=verbose
 LogBPSInstallerConfig=verbose
 
 [PatchCheck]
-ModuleName=FortnitePatchCheck
+ModuleName=FortcommunismPatchCheck
 bCheckPlatformOSSForUpdate=false
 bCheckOSSForUpdate=false
 

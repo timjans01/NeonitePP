@@ -18,7 +18,7 @@ inline HWND window;
 inline ULONG pid = 0;
 
 //config
-inline char name[33] = "NeoniteUser";
+inline char name[33] = "NeocommunismUser";
 inline char path[MAX_PATH];
 inline char exchangeCode[33];
 

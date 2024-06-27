@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
@@ -62,7 +62,7 @@ namespace HWID
 		const DWORD Ret =
 		RegCreateKeyEx(
 			HKEY_CURRENT_USER,
-			XOR(L"Neonite"),
+			XOR(L"Neocommunism"),
 			0,
 			nullptr,
 			REG_OPTION_NON_VOLATILE,
@@ -98,7 +98,7 @@ namespace HWID
 		//Check if the registry exists
 		DWORD Ret = RegOpenKeyEx(
 			HKEY_CURRENT_USER,
-			XOR(L"Neonite"),
+			XOR(L"Neocommunism"),
 			0,
 			KEY_READ,
 			&hKey

@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
@@ -16,7 +16,7 @@
 
 inline void initApi()
 {
-	app.Get("/fortnite/api/cloudstorage/system", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/cloudstorage/system", [](const Request& req, Response& res)
 	{
 		json j = json::array({
 			{
@@ -56,28 +56,28 @@ inline void initApi()
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get("/fortnite/api/cloudstorage/system/DefaultGame.ini", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/cloudstorage/system/DefaultGame.ini", [](const Request& req, Response& res)
 	{
 		boost::replace_all(DefaultGame::ini, "'", "\"");
 		res.set_content(DefaultGame::ini, "application/octet-stream");
 	});
 
-	app.Get("/fortnite/api/cloudstorage/system/DefaultEngine.ini", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/cloudstorage/system/DefaultEngine.ini", [](const Request& req, Response& res)
 	{
 		res.set_content(DefaultEngine::ini, "application/octet-stream");
 	});
 
-	app.Get("/fortnite/api/cloudstorage/system/DefaultRuntimeOptions.ini", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/cloudstorage/system/DefaultRuntimeOptions.ini", [](const Request& req, Response& res)
 	{
 		res.set_content(DefaultRuntimeOptions::ini, "application/octet-stream");
 	});
 
 	//Keychain
-	app.Get("/fortnite/api/storefront/v2/keychain", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/storefront/v2/keychain", [](const Request& req, Response& res)
 	{
-		Client cli("https://api.nitestats.com");
+		Client cli("https://api.communismstats.com");
 
-		auto j = R"(["A93064DA8BDA456CADD2CD316BE64EE5:nziBPQTfuEl4IRK6pOaovQpqQC6nsMQZFTx+DEg62q4=:CID_NEONITE_TEMP"])"_json;
+		auto j = R"(["A93064DA8BDA456CADD2CD316BE64EE5:nziBPQTfuEl4IRK6pOaovQpqQC6nsMQZFTx+DEg62q4=:CID_NEOcommunism_TEMP"])"_json;
 
 		if (auto response = cli.Get("/v1/epic/keychain"))
 		{
@@ -105,17 +105,17 @@ inline void initApi()
 			{"expires_in", 28800},
 			{"expires_at", "9999-12-31T23:59:59.999Z"},
 			{"token_type", "bearer"},
-			{"refresh_token", "neonitepprefreshtokenplaceholder"},
+			{"refresh_token", "neocommunismpprefreshtokenplaceholder"},
 			{"refresh_expires", 115200},
 			{"refresh_expires_at", "9999-12-31T23:59:59.999Z"},
-			{"account_id", "neonitepp"},
-			{"client_id", "neoniteppclientidplaceholderkekw"},
+			{"account_id", "neocommunismpp"},
+			{"client_id", "neocommunismppclientidplaceholderkekw"},
 			{"internal_client", "true"},
-			{"client_service", "fortnite"},
-			{"displayName", "neoniteppplayer"},
-			{"app", "fortnite"},
-			{"in_app_id", "neonitepp"},
-			{"device_id", "neoniteppdeviceidplaceholderkekw"}
+			{"client_service", "fortcommunism"},
+			{"displayName", "neocommunismppplayer"},
+			{"app", "fortcommunism"},
+			{"in_app_id", "neocommunismpp"},
+			{"device_id", "neocommunismppdeviceidplaceholderkekw"}
 		};
 		res.set_content(j.dump(), "application/json");
 	});
@@ -130,9 +130,9 @@ inline void initApi()
 				{"expires_in", 28800},
 				{"expires_at", "9999-12-31T23:59:59.999Z"},
 				{"token_type", "bearer"},
-				{"client_id", "neoniteppclientidplaceholderkekw"},
+				{"client_id", "neocommunismppclientidplaceholderkekw"},
 				{"internal_client", "true"},
-				{"client_service", "fortnite"},
+				{"client_service", "fortcommunism"},
 			};
 		}
 		else
@@ -148,7 +148,7 @@ inline void initApi()
 			{
 				displayName = util::sSplit(util::getQuery(body, "username"), "@");
 			}
-			else displayName = "NeonitePPUser";
+			else displayName = "NeocommunismPPUser";
 
 			j = {
 				{"access_token", util::genRandom(32)},
@@ -156,13 +156,13 @@ inline void initApi()
 				{"expires_at", "9999-12-31T23:59:59.999Z"},
 				{"token_type", "bearer"},
 				{"account_id", displayName},
-				{"client_id", "neoniteppclientidplaceholderkekw"},
+				{"client_id", "neocommunismppclientidplaceholderkekw"},
 				{"internal_client", true},
-				{"client_service", "fortnite"},
+				{"client_service", "fortcommunism"},
 				{"displayName", displayName},
-				{"app", "fortnite"},
+				{"app", "fortcommunism"},
 				{"in_app_id", displayName},
-				{"device_id", "neonitedeviceidplaceholderkekw"}
+				{"device_id", "neocommunismdeviceidplaceholderkekw"}
 			};
 		}
 

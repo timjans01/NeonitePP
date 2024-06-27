@@ -74,11 +74,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// Create application window
 	WNDCLASSEX wc = {
 		sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L,
-		GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, _T("Neonite"),
+		GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, _T("Neocommunism"),
 		nullptr
 	};
 	::RegisterClassEx(&wc);
-	HWND hwnd = ::CreateWindow(wc.lpszClassName, _T(XOR("Neonite++")), WS_POPUP, 500,
+	HWND hwnd = ::CreateWindow(wc.lpszClassName, _T(XOR("Neocommunism++")), WS_POPUP, 500,
 	                           100, 535, 320, NULL, NULL, wc.hInstance, NULL);
 
 	window = hwnd;
@@ -264,7 +264,7 @@ void Init(LPDIRECT3DDEVICE9 pDevice, HWND hWnd)
 		ImGui_ImplDX9_Init(pDevice);
 
 		ImGui::StyleColorsDark();
-		console.AddLog(XOR("                        [>] Welcome to Neonite++! \n"));
+		console.AddLog(XOR("                        [>] Welcome to Neocommunism++! \n"));
 	}
 }
 

@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 
@@ -45,7 +45,7 @@ namespace launcher
 
 			for (int i = 0; i < installationList.size(); i++)
 			{
-				if (installationList[i]["AppName"] == "Fortnite")
+				if (installationList[i]["AppName"] == "Fortcommunism")
 				{
 					fnPath = installationList[i]["InstallLocation"];
 				}
@@ -53,7 +53,7 @@ namespace launcher
 
 			if (fnPath.empty())
 			{
-				console.AddLog("[x] Couldn't find Fortnite directory.");
+				console.AddLog("[x] Couldn't find Fortcommunism directory.");
 				return;
 			}
 
@@ -67,20 +67,20 @@ namespace launcher
 
 		std::string szClientFile =
 			fnPath +
-			"\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe";
+			"\\FortcommunismGame\\Binaries\\Win64\\FortcommunismClient-Win64-Shipping.exe";
 
 		std::ostringstream oss;
 		if (exchange.empty())
 		{
 			oss <<
-				" -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -noeac -nobe -fromfl=non -AUTH_LOGIN="
+				" -epicapp=Fortcommunism -epicenv=Prod -epiclocale=en-us -epicportal -noeac -nobe -fromfl=non -AUTH_LOGIN="
 				<< name
 				<< "@unused.com -AUTH_PASSWORD=unused -AUTH_TYPE=epic";
 		}
 		else
 		{
 			oss <<
-				" -AUTH_LOGIN=unused AUTH_TYPE=exchangecode -epicapp=Fortnite -epicenv=Prod -noeac -nobe -fromfl=non -epicportal -epiclocale=en-us -AUTH_PASSWORD="
+				" -AUTH_LOGIN=unused AUTH_TYPE=exchangecode -epicapp=Fortcommunism -epicenv=Prod -noeac -nobe -fromfl=non -epicportal -epiclocale=en-us -AUTH_PASSWORD="
 				<< exchange;
 		}
 		std::string s = oss.str();
@@ -91,12 +91,12 @@ namespace launcher
 
 		if (hClient && hClient != INVALID_HANDLE_VALUE)
 		{
-			console.AddLog("[+] Fortnite was launched.");
+			console.AddLog("[+] Fortcommunism was launched.");
 
 			//prevent mapping the dll too fast
 			while (pid == 0)
 			{
-				pid = util::GetProcId("FortniteClient-Win64-Shipping.exe");
+				pid = util::GetProcId("FortcommunismClient-Win64-Shipping.exe");
 			}
 
 			std::string dllPath = util::GetEXEPath() + "\\Cranium.dll";

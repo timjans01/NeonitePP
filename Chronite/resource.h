@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // File di inclusione generato con Microsoft Visual C++.
-// Utilizzato da NeoniteC++.rc
+// Utilizzato da NeocommunismC++.rc
 //
 #define IDI_ICON1                       101
 

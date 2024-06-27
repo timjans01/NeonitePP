@@ -1,7 +1,7 @@
 #pragma once
 #include "../util.h"
 
-struct NeoniteGUI
+struct NeocommunismGUI
 {
 	char InputBuf[256];
 	ImVector<char*> Items;
@@ -12,7 +12,7 @@ struct NeoniteGUI
 	bool AutoScroll;
 	bool ScrollToBottom;
 
-	NeoniteGUI()
+	NeocommunismGUI()
 	{
 		ClearLog();
 		memset(InputBuf, 0, sizeof(InputBuf));
@@ -27,7 +27,7 @@ struct NeoniteGUI
 		ScrollToBottom = false;
 	}
 
-	~NeoniteGUI()
+	~NeocommunismGUI()
 	{
 		ClearLog();
 		for (int i = 0; i < History.Size; i++) free(History[i]);
@@ -243,7 +243,7 @@ struct NeoniteGUI
 	// In C++11 you'd be better off using lambdas for this sort of forwarding callbacks
 	static int TextEditCallbackStub(ImGuiInputTextCallbackData* data)
 	{
-		NeoniteGUI* console = static_cast<NeoniteGUI*>(data->UserData);
+		NeocommunismGUI* console = static_cast<NeocommunismGUI*>(data->UserData);
 		return console->TextEditCallback(data);
 	}
 
@@ -346,5 +346,5 @@ struct NeoniteGUI
 	}
 };
 
-inline NeoniteGUI console;
-inline NeoniteGUI client;
+inline NeocommunismGUI console;
+inline NeocommunismGUI client;

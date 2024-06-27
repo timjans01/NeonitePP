@@ -483,7 +483,7 @@ RAPIDJSON_MULTILINEMACRO_END
 				itemsList_(),
 				itemsTuple_(),
 				itemsTupleCount_(),
-				minItems_(),
+				micommunismms_(),
 				maxItems_(SizeType(~0)),
 				additionalItems_(true),
 				uniqueItems_(false),
@@ -667,7 +667,7 @@ RAPIDJSON_MULTILINEMACRO_END
 					}
 				}
 
-				AssignIfExist(minItems_, value, GetMinItemsString());
+				AssignIfExist(micommunismms_, value, GetMicommunismmsString());
 				AssignIfExist(maxItems_, value, GetMaxItemsString());
 
 				if (const ValueType* v = GetMember(value, GetAdditionalItemsString()))
@@ -1105,10 +1105,10 @@ RAPIDJSON_MULTILINEMACRO_END
 			{
 				context.inArray = false;
 
-				if (elementCount < minItems_)
+				if (elementCount < micommunismms_)
 				{
-					context.error_handler.TooFewItems(elementCount, minItems_);
-					RAPIDJSON_INVALID_KEYWORD_RETURN(GetMinItemsString());
+					context.error_handler.TooFewItems(elementCount, micommunismms_);
+					RAPIDJSON_INVALID_KEYWORD_RETURN(GetMicommunismmsString());
 				}
 
 				if (elementCount > maxItems_)
@@ -1149,7 +1149,7 @@ RAPIDJSON_MULTILINEMACRO_END
 			RAPIDJSON_STRING_(MinProperties, 'm', 'i', 'n', 'P', 'r', 'o', 'p', 'e', 'r', 't', 'i', 'e', 's')
 			RAPIDJSON_STRING_(MaxProperties, 'm', 'a', 'x', 'P', 'r', 'o', 'p', 'e', 'r', 't', 'i', 'e', 's')
 			RAPIDJSON_STRING_(Items, 'i', 't', 'e', 'm', 's')
-			RAPIDJSON_STRING_(MinItems, 'm', 'i', 'n', 'I', 't', 'e', 'm', 's')
+			RAPIDJSON_STRING_(Micommunismms, 'm', 'i', 'n', 'I', 't', 'e', 'm', 's')
 			RAPIDJSON_STRING_(MaxItems, 'm', 'a', 'x', 'I', 't', 'e', 'm', 's')
 			RAPIDJSON_STRING_(AdditionalItems, 'a', 'd', 'd', 'i', 't', 'i', 'o', 'n', 'a', 'l', 'I', 't', 'e', 'm', 's')
 			RAPIDJSON_STRING_(UniqueItems, 'u', 'n', 'i', 'q', 'u', 'e', 'I', 't', 'e', 'm', 's')
@@ -1581,7 +1581,7 @@ RAPIDJSON_MULTILINEMACRO_END
 			const SchemaType* itemsList_;
 			const SchemaType** itemsTuple_;
 			SizeType itemsTupleCount_;
-			SizeType minItems_;
+			SizeType micommunismms_;
 			SizeType maxItems_;
 			bool additionalItems_;
 			bool uniqueItems_;
@@ -2151,7 +2151,7 @@ RAPIDJSON_MULTILINEMACRO_END
 
 		void TooFewItems(SizeType actualCount, SizeType expectedCount) override
 		{
-			AddNumberError(SchemaType::GetMinItemsString(),
+			AddNumberError(SchemaType::GetMicommunismmsString(),
 			               ValueType(actualCount).Move(), SValue(expectedCount).Move());
 		}
 

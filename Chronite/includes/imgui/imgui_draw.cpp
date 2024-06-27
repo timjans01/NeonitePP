@@ -2260,7 +2260,7 @@ static const char FONT_ATLAS_DEFAULT_TEX_DATA_PIXELS[
 			atlas->TexGlyphPadding, NULL);
 		ImFontAtlasBuildPackCustomRects(atlas, spc.pack_info);
 
-		// 6. Pack each source font. No rendering yet, we are working with rectangles in an infinitely tall texture at this point.
+		// 6. Pack each source font. No rendering yet, we are working with rectangles in an inficommunismly tall texture at this point.
 		for (int src_i = 0; src_i < src_tmp_array.Size; src_i++) {
 			ImFontBuildSrcData& src_tmp = src_tmp_array[src_i];
 			if (src_tmp.GlyphsCount == 0)

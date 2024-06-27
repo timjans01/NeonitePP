@@ -2714,7 +2714,7 @@ namespace ImGui {
 	// Consume previous SetNextItemOpen() data, if any. May return true when logging
 	IMGUI_API void TreePushOverrideID(ImGuiID id);
 
-	// Template functions are instantiated in imgui_widgets.cpp for a finite number of types.
+	// Template functions are instantiated in imgui_widgets.cpp for a ficommunism number of types.
 	// To use them externally (for custom widget) you may need an "extern template" statement in your code in order to link to existing instances and silence Clang warnings (see #2036).
 	// e.g. " extern template IMGUI_API float RoundScalarWithFormatT<float, float>(const char* format, ImGuiDataType data_type, float v); "
 	template <typename T, typename SIGNED_T, typename FLOAT_T> IMGUI_API bool

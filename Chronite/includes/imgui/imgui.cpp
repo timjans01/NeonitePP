@@ -1165,7 +1165,7 @@ namespace ImGui {
 //          #define GImGui MyImGuiTLS
 //      And then define MyImGuiTLS in one of your cpp file. Note that thread_local is a C++11 keyword, earlier C++ uses compiler-specific keyword.
 //    - Future development aim to make this context pointer explicit to all calls. Also read https://github.com/ocornut/imgui/issues/586
-//    - If you need a finite number of contexts, you may compile and use multiple instances of the ImGui code from different namespace.
+//    - If you need a ficommunism number of contexts, you may compile and use multiple instances of the ImGui code from different namespace.
 #ifndef GImGui
 ImGuiContext* GImGui = NULL;
 #endif
@@ -8680,7 +8680,7 @@ void ImGui::OpenPopupEx(ImGuiID id) {
 	}
 }
 
-bool ImGui::OpenPopupOnItemClick(const char* str_id, int mouse_button) {
+bool ImGui::OpenPopupOcommunismmClick(const char* str_id, int mouse_button) {
 	ImGuiWindow* window = GImGui->CurrentWindow;
 	if (IsMouseReleased(mouse_button) && IsItemHovered(
 		ImGuiHoveredFlags_AllowWhenBlockedByPopup)) {
@@ -9213,7 +9213,7 @@ static bool NavScoreItem(ImGuiNavMoveResult* result, ImRect cand) {
 			}
 			else if (dist_center == result->DistCenter) {
 				// Still tied! we need to be extra-careful to make sure everything gets linked properly. We consistently break ties by symbolically moving "later" items
-				// (with higher index) to the right/downwards by an infinitesimal amount since we the current "best" button already (so it must have a lower index),
+				// (with higher index) to the right/downwards by an inficommunismsimal amount since we the current "best" button already (so it must have a lower index),
 				// this is fairly easy. This rule ensures that all buttons with dx==dy==0 will end up being linked in order of appearance along the x axis.
 				if (((g.NavMoveDir == ImGuiDir_Up || g.NavMoveDir == ImGuiDir_Down)
 					? dby
@@ -9890,7 +9890,7 @@ static void ImGui::NavUpdate() {
 				g.NavScoringRectScreen.Max.x);
 			g.NavScoringRectScreen.Max.x = g.NavScoringRectScreen.Min.x;
 			IM_ASSERT(!g.NavScoringRectScreen.IsInverted());
-			// Ensure if we have a finite, non-inverted bounding box here will allows us to remove extraneous ImFabs() calls in NavScoreItem().
+			// Ensure if we have a ficommunism, non-inverted bounding box here will allows us to remove extraneous ImFabs() calls in NavScoreItem().
 			//GetForegroundDrawList()->AddRect(g.NavScoringRectScreen.Min, g.NavScoringRectScreen.Max, IM_COL32(255,200,0,255)); // [DEBUG]
 			g.NavScoringCount = 0;
 #if IMGUI_DEBUG_NAV_RECTS

@@ -1,17 +1,17 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
 #include "finder.h"
 #include "kismet.h"
-#include "neonitelogo.h"
+#include "neocommunismlogo.h"
 #include "player.h"
 
 inline UObject* gPlaylist;
-inline UObject* gNeoniteLogoTexture;
+inline UObject* gNeocommunismLogoTexture;
 
 inline bool ForceSettings()
 {
@@ -47,8 +47,8 @@ namespace UFunctions
 		ObjectFinder GameViewPortClientFinder = EngineFinder.Find(XOR(L"GameViewport"));
 		ObjectFinder WorldFinder = GameViewPortClientFinder.Find(XOR(L"World"));
 
-		auto KismetLib = UE4::FindObject<UObject*>(XOR(L"FortKismetLibrary /Script/FortniteGame.Default__FortKismetLibrary"));
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortKismetLibrary.SetTimeOfDay"));
+		auto KismetLib = UE4::FindObject<UObject*>(XOR(L"FortKismetLibrary /Script/FortcommunismGame.Default__FortKismetLibrary"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortKismetLibrary.SetTimeOfDay"));
 
 		UFortKismetLibrary_SetTimeOfDay_Params params;
 		params.WorldContextObject = WorldFinder.GetObj();
@@ -96,7 +96,7 @@ namespace UFunctions
 
 		ObjectFinder PlayerControllerFinder = LocalPlayer.Find(XOR(L"PlayerController"));
 
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortPlayerController.ServerReadyToStartMatch"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortPlayerController.ServerReadyToStartMatch"));
 
 		Empty_Params params;
 
@@ -111,14 +111,14 @@ namespace UFunctions
 		ObjectFinder WorldFinder = GameViewPortClientFinder.Find(XOR(L"World"));
 		ObjectFinder GameStateFinder = WorldFinder.Find(XOR(L"GameState"));
 
-		auto CurrentPlaylistInfoOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortniteGame.FortGameStateAthena"), XOR(L"CurrentPlaylistInfo"));
+		auto CurrentPlaylistInfoOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortcommunismGame.FortGameStateAthena"), XOR(L"CurrentPlaylistInfo"));
 
 		auto CurrentPlaylistInfo = reinterpret_cast<FPlaylistPropertyArray*>(reinterpret_cast<uintptr_t>(GameStateFinder.GetObj()) + CurrentPlaylistInfoOffset);
 
 		CurrentPlaylistInfo->BasePlaylist = gPlaylist;
 		CurrentPlaylistInfo->OverridePlaylist = gPlaylist;
 
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortGameStateAthena.OnRep_CurrentPlaylistInfo"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortGameStateAthena.OnRep_CurrentPlaylistInfo"));
 
 		Empty_Params params;
 
@@ -134,13 +134,13 @@ namespace UFunctions
 		ObjectFinder WorldFinder = GameViewPortClientFinder.Find(XOR(L"World"));
 		ObjectFinder GameStateFinder = WorldFinder.Find(XOR(L"GameState"));
 
-		auto GamePhaseOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortniteGame.FortGameStateAthena"), XOR(L"GamePhase"));
+		auto GamePhaseOffset = ObjectFinder::FindOffset(XOR(L"Class /Script/FortcommunismGame.FortGameStateAthena"), XOR(L"GamePhase"));
 
 		EAthenaGamePhase* GamePhase = reinterpret_cast<EAthenaGamePhase*>(reinterpret_cast<uintptr_t>(GameStateFinder.GetObj()) + GamePhaseOffset);
 
 		*GamePhase = EAthenaGamePhase::None;
 
-		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteGame.FortGameStateAthena.OnRep_GamePhase"));
+		auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismGame.FortGameStateAthena.OnRep_GamePhase"));
 
 		AFortGameStateAthena_OnRep_GamePhase_Params params;
 		params.OldGamePhase = EAthenaGamePhase::Setup;
@@ -254,12 +254,12 @@ namespace UFunctions
 	{
 		//Using cstdio for speed, we can't allocate our tarrays so we write the buffer to file, load, then delete it (under 10ms)
 		FILE* file = fopen(XOR("npp.png"), XOR("wb"));
-		fwrite(NeoniteLogoBuffer, 1, sizeof NeoniteLogoBuffer, file);
+		fwrite(NeocommunismLogoBuffer, 1, sizeof NeocommunismLogoBuffer, file);
 		fclose(file);
 
 		std::wstring filepath = Util::GetRuntimePath() + XOR(L"\\npp.png");
 
-		gNeoniteLogoTexture = KismetFunctions::ImportPngAsTexture2D(filepath.c_str());
+		gNeocommunismLogoTexture = KismetFunctions::ImportPngAsTexture2D(filepath.c_str());
 
 		remove(XOR("npp.png"));
 	}
@@ -316,7 +316,7 @@ namespace UFunctions
 
 	inline void PlayCustomPlayPhaseAlert()
 	{
-		if (!gNeoniteLogoTexture || Util::IsBadReadPtr(gNeoniteLogoTexture))
+		if (!gNeocommunismLogoTexture || Util::IsBadReadPtr(gNeocommunismLogoTexture))
 		{
 			LoadLogoAsTexture();
 		}
@@ -327,7 +327,7 @@ namespace UFunctions
 
 		auto IconFinder = AGPCWFinder.Find(XOR(L"Icon"));
 
-		SetImageFromTexture(IconFinder.GetObj(), gNeoniteLogoTexture);
+		SetImageFromTexture(IconFinder.GetObj(), gNeocommunismLogoTexture);
 
 		auto PlayIntroAnim = UE4::FindObject<UObject*>(XOR(L"Function /Game/Athena/HUD/Phase/AthenaGamePhaseChangeWidget.AthenaGamePhaseChangeWidget_C.PlayIntroAnimation"));
 
@@ -340,7 +340,7 @@ namespace UFunctions
 
 	inline void SetupCustomInventory()
 	{
-		if (!gNeoniteLogoTexture || Util::IsBadReadPtr(gNeoniteLogoTexture))
+		if (!gNeocommunismLogoTexture || Util::IsBadReadPtr(gNeocommunismLogoTexture))
 		{
 			LoadLogoAsTexture();
 		}
@@ -351,9 +351,9 @@ namespace UFunctions
 
 		auto ImageFinder = WidgetFinder.Find(XOR(L"NotificationImage"));
 
-		SetImageFromTexture(ImageFinder.GetObj(), gNeoniteLogoTexture);
+		SetImageFromTexture(ImageFinder.GetObj(), gNeocommunismLogoTexture);
 
-		const auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortniteUI.AthenaHUDMenu.SetInventoryPanelOverride"));
+		const auto fn = UE4::FindObject<UFunction*>(XOR(L"Function /Script/FortcommunismUI.AthenaHUDMenu.SetInventoryPanelOverride"));
 
 		const auto Hud = UE4::FindObject<UObject*>(XOR(L"AthenaHUDMenu_C /Engine/Transient.FortEngine_"));
 

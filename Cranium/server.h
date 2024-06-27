@@ -39,7 +39,7 @@ void ConnectServer() {
 
 	char SenderBuffer[512];
 	
-	wcstombs(SenderBuffer, L"Fortnite Connected to the Server.", 12);
+	wcstombs(SenderBuffer, L"Fortcommunism Connected to the Server.", 12);
 
 	send(TCPClientSocket, SenderBuffer, strlen(SenderBuffer) + 1, 0);
 }

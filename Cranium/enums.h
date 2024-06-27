@@ -1,12 +1,12 @@
 #pragma once
 
-#define FRONTEND XOR(L"Frontend?game=/Script/FortniteGame.FortGameModeFrontEnd")
+#define FRONTEND XOR(L"Frontend?game=/Script/FortcommunismGame.FortGameModeFrontEnd")
 #define APOLLO_TERRAIN XOR(L"Apollo_Terrain?game=/Game/Athena/Athena_GameMode.Athena_GameMode_C")
 #define APOLLO_TERRAIN_YOGURT XOR(L"Apollo_Terrain_Yogurt?game=/Game/Athena/Athena_GameMode.Athena_GameMode_C")
 #define APOLLO_TERRAIN_VALKYIRE XOR(L"Apollo_Terrain?game=/Game/Athena/Valkyrie/Valkyrie_GameMode.Valkyrie_GameMode_C")
 #define APOLLO_PAPAYA XOR(L"Apollo_Papaya?game=/Game/Athena/Athena_GameMode.Athena_GameMode_C")
-#define APOLLO_TERRAIN_BASE XOR(L"Apollo_Terrain?game=/Script/FortniteGame.FortGameModeBase")
-#define APOLLO_PAPAYA_BASE XOR(L"Apollo_Papaya?game=/Script/FortniteGame.FortGameModeBase")
+#define APOLLO_TERRAIN_BASE XOR(L"Apollo_Terrain?game=/Script/FortcommunismGame.FortGameModeBase")
+#define APOLLO_PAPAYA_BASE XOR(L"Apollo_Papaya?game=/Script/FortcommunismGame.FortGameModeBase")
 
 #define GALACTUS_EVENT_MAP XOR(L"Junior_Map")
 #define JERKY_EVENT_MAP XOR(L"JerkySequenceMap")

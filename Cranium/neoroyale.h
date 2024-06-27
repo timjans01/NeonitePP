@@ -1,7 +1,7 @@
 ﻿/**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
@@ -47,7 +47,7 @@ namespace NeoRoyale
 		NeoPlayer.AnimInstance = nullptr;
 		Bots.clear();
 		gPlaylist = nullptr;
-		gNeoniteLogoTexture = nullptr;
+		gNeocommunismLogoTexture = nullptr;
 	}
 
 	inline void LoadMoreClasses()
@@ -167,7 +167,7 @@ namespace NeoRoyale
 
 	inline void Init()
 	{
-		UFunctions::DestroyAll(UE4::FindObject<UClass*>(XOR(L"Class /Script/FortniteGame.FortHLODSMActor")));
+		UFunctions::DestroyAll(UE4::FindObject<UClass*>(XOR(L"Class /Script/FortcommunismGame.FortHLODSMActor")));
 
 		NeoPlayer.Pawn = UE4::SpawnActorEasy(UE4::FindObject<UClass*>(XOR(L"BlueprintGeneratedClass /Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C")));
 
@@ -181,7 +181,7 @@ namespace NeoRoyale
 
 			NeoPlayer.ShowPickaxe();
 
-			NeoPlayer.ToggleInfiniteAmmo();
+			NeoPlayer.ToggleInficommunismAmmo();
 
 			NeoPlayer.ApplyOverride();
 
@@ -223,7 +223,7 @@ namespace NeoRoyale
 
 			CreateThread(nullptr, NULL, reinterpret_cast<LPTHREAD_START_ROUTINE>(&Thread), nullptr, NULL, nullptr);
 
-			UFunctions::ConsoleLog(XOR(L"\n\nWelcome to Neonite++\nMade with ♥ By Kemo (@xkem0x on twitter)."));
+			UFunctions::ConsoleLog(XOR(L"\n\nWelcome to Neocommunism++\nMade with ♥ By Kemo (@xkem0x on twitter)."));
 
 			//ConnectServer();
 

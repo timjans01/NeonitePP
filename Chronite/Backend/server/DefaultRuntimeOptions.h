@@ -4,7 +4,7 @@ namespace DefaultRuntimeOptions
 {
 #ifdef PROD
 	inline std::string ini =
-		R"([/Script/FortniteGame.FortRuntimeOptions]
+		R"([/Script/FortcommunismGame.FortRuntimeOptions]
 bMOTDSameNewsForCreative=true
 bForceBRMode=true
 bEnableSavedLoadouts=false
@@ -21,7 +21,7 @@ bIsOutOfSeasonMode=true
 )";
 #else
 	inline std::string ini =
-		R"([/Script/FortniteGame.FortRuntimeOptions]
+		R"([/Script/FortcommunismGame.FortRuntimeOptions]
 bMOTDSameNewsForCreative=true
 bForceBRMode=true
 bEnableSavedLoadouts=false

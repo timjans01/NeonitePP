@@ -24,8 +24,8 @@ packages/
 *.filters
 OLDBACKEND/
 *.user
-.vs/Chronite/v16/Browse.VC.db
-.vs/Chronite/v16/.suo
+.vs/Chrocommunism/v16/Browse.VC.db
+.vs/Chrocommunism/v16/.suo
 *.ipch
 *.db-wal
 *.db-shm
