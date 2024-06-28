@@ -6,7 +6,7 @@ namespace settings
 {
 	inline bool config(bool sol)
 	{
-		std::string configPath = util::GetEXEPath() + "\\neonite.config";
+		std::string configPath = util::GetEXEPath() + "\\neocommunism.config";
 		const char* configFile = configPath.c_str();
 		json config = {
 			{"name", name},
@@ -83,7 +83,7 @@ namespace settings
 
 		for (auto i = 0; i < installationList.size(); i++)
 		{
-			if (installationList[i]["AppName"] == "Fortnite")
+			if (installationList[i]["AppName"] == "Fortcommunism")
 			{
 				fnPath = installationList[i]["InstallLocation"];
 			}

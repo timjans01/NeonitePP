@@ -7,9 +7,9 @@ inline void initDynamics()
 		const auto j =
 		R"(
 		[{
-			"serviceInstanceId": "fortnite",
+			"serviceInstanceId": "fortcommunism",
 			"status": "UP",
-			"message": "Neonite++",
+			"message": "Neocommunism++",
 			"maintenanceUri": null,
 			"allowedActions": ["PLAY", "DOWNLOAD"],
 			"banned": false
@@ -18,19 +18,19 @@ inline void initDynamics()
 		res.set_content(j, "application/json");
 	});
 
-	app.Get(R"(/fortnite/api/v2/versioncheck/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/v2/versioncheck/(.*))", [](const Request& req, Response& res)
 	{
 		const auto j = R"({"type": "NO_UPDATE"})"_json;
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get("/content/api/pages/fortnite-game/", [](const Request& req, Response& res)
+	app.Get("/content/api/pages/fortcommunism-game/", [](const Request& req, Response& res)
 	{
-		json j = fortniteGame();
+		json j = fortcommunismGame();
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get("/fortnite/api/calendar/v1/timeline", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/calendar/v1/timeline", [](const Request& req, Response& res)
 	{
 		json j = calendar();
 		res.set_content(j.dump(), "application/json");
@@ -59,7 +59,7 @@ inline void initDynamics()
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get(R"(/fortnite/api/game/v2/privacy/account/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/game/v2/privacy/account/(.*))", [](const Request& req, Response& res)
 	{
 		auto account_id = static_cast<std::string>(req.matches[1]);
 		json j = {
@@ -74,15 +74,15 @@ inline void initDynamics()
 		const auto j =
 		R"(
           [{
-              "accountId": "neoniteuseridplaceholder",
+              "accountId": "neocommunismuseridplaceholder",
               "key": "avatar",
               "value": "cid_005_athena_commando_m_default"
           }, {
-              "accountId": "neoniteuseridplaceholder",
+              "accountId": "neocommunismuseridplaceholder",
               "key": "avatarBackground",
               "value": "[\"#8EFDE5\",\"#1CBA9E\",\"#034D3F\"]"
           }, {
-              "accountId": "neoniteuseridplaceholder",
+              "accountId": "neocommunismuseridplaceholder",
               "key": "appInstalled",
               "value": "init"
           }]
@@ -90,7 +90,7 @@ inline void initDynamics()
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get("/api/v1/Fortnite/get", [](const Request& req, Response& res)
+	app.Get("/api/v1/Fortcommunism/get", [](const Request& req, Response& res)
 	{
 		const auto j =
 		R"({"interactions": []})"_json;
@@ -124,7 +124,7 @@ inline void initDynamics()
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Post(R"(/fortnite/api/game/v2/tryPlayOnPlatform/account/(.*))", [](const Request& req, Response& res)
+	app.Post(R"(/fortcommunism/api/game/v2/tryPlayOnPlatform/account/(.*))", [](const Request& req, Response& res)
 	{
 		res.set_content("true", "text/plain");
 	});
@@ -136,24 +136,24 @@ inline void initDynamics()
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get(R"(/party/api/v1/Fortnite/user/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/party/api/v1/Fortcommunism/user/(.*))", [](const Request& req, Response& res)
 	{
 		const auto j = R"({ "current": [], "pending": [], "invites": [], "pings": [] })"_json;
 		res.set_content(j.dump(), "application/json");
 	});
 
-	app.Get("/fortnite/api/storefront/v2/catalog", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/storefront/v2/catalog", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
 
-	app.Get("/fortnite/api/cloudstorage/system/config", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/cloudstorage/system/config", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
 
 
-	app.Post(R"(/api/v1/assets/Fortnite/(.*))", [](const Request& req, Response& res)
+	app.Post(R"(/api/v1/assets/Fortcommunism/(.*))", [](const Request& req, Response& res)
 	{
 		const auto j =
 		R"(

@@ -1,14 +1,14 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
 
 inline void initProfile()
 {
-	app.Post(R"(/fortnite/api/game/v2/profile/(.*)/client/(.*))", [](const Request& req, Response& res)
+	app.Post(R"(/fortcommunism/api/game/v2/profile/(.*)/client/(.*))", [](const Request& req, Response& res)
 	         {
 		         std::string account_id = static_cast<std::string>(req.matches[1]);
 		         std::string command = static_cast<std::string>(req.matches[2]);

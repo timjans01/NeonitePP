@@ -1,10 +1,10 @@
 #pragma once
 
-inline json rFortniteGame =
+inline json rFortcommunismGame =
 R"(
 {
             "jcr:isCheckedOut": true,
-            "_title": "Fortnite Game",
+            "_title": "Fortcommunism Game",
             "jcr:baseVersion": "a7ca237317f1e7b00bc82e-d9a2-4f0d-b951-704d295cd1aa",
             "_activeDate": "2017-07-24T22:24:02.300Z",
             "lastModified": "2020-11-01T17:36:19.024Z",
@@ -18,7 +18,7 @@ R"(
                         "_type": "CommonUI Simple Message Base",
                         "subgame": "br",
                         "body": "Made by kemo (@xkem0x).\r\nDiscord: https://discord.gg/DJ6VUmD",
-                        "title": "Neonite++",
+                        "title": "Neocommunism++",
                         "spotlight": false
                     }
                     ]
@@ -75,18 +75,18 @@ R"(
                 "news": {
                     "motds": [{
                         "entryType": "Website",
-                        "image": "https://cdn.discordapp.com/attachments/703974059121049720/792648701297295390/NeoniteWallpaper.png",
+                        "image": "https://cdn.discordapp.com/attachments/703974059121049720/792648701297295390/NeocommunismWallpaper.png",
                         "tileImage": "https://cdn.discordapp.com/attachments/703974059121049720/792654680512921640/InGameBanner.png",
                         "videoMute": false,
                         "hidden": false,
-                        "tabTitleOverride": "Neonite++",
+                        "tabTitleOverride": "Neocommunism++",
                         "_type": "CommonUI Simple Message MOTD",
-                        "title": "Neonite++",
+                        "title": "Neocommunism++",
                         "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord by clicking the button below.",
                         "videoLoop": false,
                         "videoStreamingEnabled": false,
                         "sortingPriority": 80,
-                        "id": "NeoniteNewsBR",
+                        "id": "NeocommunismNewsBR",
                         "videoAutoplay": false,
                         "videoFullscreen": false,
                         "spotlight": false,
@@ -95,28 +95,28 @@ R"(
                     },
 {
           "entryType": "ItemWithVideo",
-          "image": "https://cdn.fortnite-api.com/streams/fortnite-api/Banner_1080.png",
-          "tileImage": "https://cdn.fortnite-api.com/streams/fortnite-api/Banner_1024.png",
+          "image": "https://cdn.fortcommunism-api.com/streams/fortcommunism-api/Banner_1080.png",
+          "tileImage": "https://cdn.fortcommunism-api.com/streams/fortcommunism-api/Banner_1024.png",
           "hidden": false,
           "videoMute": false,
-          "tabTitleOverride": "Fortnite-API",
+          "tabTitleOverride": "Fortcommunism-API",
           "_type": "CommonUI Simple Message MOTD",
-          "title": "Fortnite-API.com",
-          "body": "Welcome to the Fortnite-API headquarters in Jamaica.",
+          "title": "Fortcommunism-API.com",
+          "body": "Welcome to the Fortcommunism-API headquarters in Jamaica.",
           "videoLoop": false,
           "offerAction": "ShowOfferDetails",
           "videoStreamingEnabled": true,
           "sortingPriority": 90,
-          "videoUID": "fortnite-api",
+          "videoUID": "fortcommunism-api",
           "buttonTextOverride": "Visit our website",
-          "videoVideoString": "fortnite_api_motd",
+          "videoVideoString": "fortcommunism_api_motd",
           "offerId": "",
-          "id": "Fortnite-API MOTD",
+          "id": "Fortcommunism-API MOTD",
           "videoAutoplay": true,
           "videoFullscreen": true,
           "spotlight": false,
           "websiteButtonTex": "Visit our website",
-          "websiteURL": "https://fortnite-api.com/"
+          "websiteURL": "https://fortcommunism-api.com/"
         }
                 ]
                 },
@@ -136,14 +136,14 @@ R"(
                 "itemsList": {
                     "_type": "ShopCarouselItemList",
                     "items": [{
-                        "tileImage": "https://cdn.discordapp.com/attachments/703974059121049720/788709757024337930/NeoniteWallpaper.png",
-                        "fullTitle": "Neonite",
+                        "tileImage": "https://cdn.discordapp.com/attachments/703974059121049720/788709757024337930/NeocommunismWallpaper.png",
+                        "fullTitle": "Neocommunism",
                         "hidden": false,
                         "_type": "ShopCarouselItem",
                         "landingPriority": 100,
                         "action": "ShowOfferDetails",
                         "offerId": "v2:/cc29bec6d0bdd2876fb412cf674a7960003bbb76b2eb9b930833a61b604a3b4e",
-                        "title": "Neonite"
+                        "title": "Neocommunism"
                     }]
                 },
                 "_title": "shop-carousel",
@@ -157,7 +157,7 @@ R"(
         }
 )"_json;
 
-inline json fortniteGame()
+inline json fortcommunismGame()
 {
-	return rFortniteGame;
+	return rFortcommunismGame;
 }

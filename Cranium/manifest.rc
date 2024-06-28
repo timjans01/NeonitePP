@@ -13,7 +13,7 @@ PRODUCTVERSION 1, 0, 0, 0
         BLOCK "040904b0"
         {
             VALUE "Comments", "Cranium"
-                VALUE "CompanyName", "Neonite"
+                VALUE "CompanyName", "Neocommunism"
 
                 VALUE "FileDescription", "Cranium"
                 VALUE "FileVersion", "1.0.0.0"

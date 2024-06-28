@@ -3108,7 +3108,7 @@ namespace nlohmann
 		};
 
 		// This trait checks if BasicJsonType::json_serializer<T>::to_json exists
-		// Do not evaluate the trait when T is a basic_json type, to avoid template instantiation infinite recursion.
+		// Do not evaluate the trait when T is a basic_json type, to avoid template instantiation inficommunism recursion.
 		template <typename BasicJsonType, typename T, typename = void>
 		struct has_to_json : std::false_type
 		{
@@ -6924,7 +6924,7 @@ namespace nlohmann
 
 			This function scans a string according to Sect. 6 of RFC 7159.
 
-			The function is realized with a deterministic finite state machine derived
+			The function is realized with a deterministic ficommunism state machine derived
 			from the grammar described in RFC 7159. Starting in state "init", the
 			input is read and used to determined the next state. Only state "done"
 			accepts the number. State "error" is a trap state to model errors. In the
@@ -8305,7 +8305,7 @@ namespace nlohmann
 				case 0x59: // Binary data (two-byte uint16_t for n follow)
 				case 0x5A: // Binary data (four-byte uint32_t for n follow)
 				case 0x5B: // Binary data (eight-byte uint64_t for n follow)
-				case 0x5F: // Binary data (indefinite length)
+				case 0x5F: // Binary data (indeficommunism length)
 				{
 					binary_t b;
 					return get_cbor_binary(b) && sax->binary(b);
@@ -8340,7 +8340,7 @@ namespace nlohmann
 				case 0x79: // UTF-8 string (two-byte uint16_t for n follow)
 				case 0x7A: // UTF-8 string (four-byte uint32_t for n follow)
 				case 0x7B: // UTF-8 string (eight-byte uint64_t for n follow)
-				case 0x7F: // UTF-8 string (indefinite length)
+				case 0x7F: // UTF-8 string (indeficommunism length)
 				{
 					string_t s;
 					return get_cbor_string(s) && sax->string(s);
@@ -8397,7 +8397,7 @@ namespace nlohmann
 					return get_number(input_format_t::cbor, len) && get_cbor_array(static_cast<std::size_t>(len), tag_handler);
 				}
 
-				case 0x9F: // array (indefinite length)
+				case 0x9F: // array (indeficommunism length)
 					return get_cbor_array(std::size_t(-1), tag_handler);
 
 					// map (0x00..0x17 pairs of data items follow)
@@ -8451,7 +8451,7 @@ namespace nlohmann
 					return get_number(input_format_t::cbor, len) && get_cbor_object(static_cast<std::size_t>(len), tag_handler);
 				}
 
-				case 0xBF: // map (indefinite length)
+				case 0xBF: // map (indeficommunism length)
 					return get_cbor_object(std::size_t(-1), tag_handler);
 
 				case 0xC6: // tagged item
@@ -8603,7 +8603,7 @@ namespace nlohmann
 
 			This function first reads starting bytes to determine the expected
 			string length and then copies this number of bytes into a string.
-			Additionally, CBOR's strings with indefinite lengths are supported.
+			Additionally, CBOR's strings with indeficommunism lengths are supported.
 
 			@param[out] result  created string
 
@@ -8671,7 +8671,7 @@ namespace nlohmann
 					return get_number(input_format_t::cbor, len) && get_string(input_format_t::cbor, len, result);
 				}
 
-				case 0x7F: // UTF-8 string (indefinite length)
+				case 0x7F: // UTF-8 string (indeficommunism length)
 				{
 					while (get() != 0xFF)
 					{
@@ -8690,7 +8690,7 @@ namespace nlohmann
 					auto last_token = get_token_string();
 					return sax->parse_error(chars_read, last_token,
 					                        parse_error::create(113, chars_read, exception_message(input_format_t::cbor,
-					                                                                               "expected length specification (0x60-0x7B) or indefinite string type (0x7F); last byte: 0x" +
+					                                                                               "expected length specification (0x60-0x7B) or indeficommunism string type (0x7F); last byte: 0x" +
 					                                                                               last_token, "string")));
 				}
 				}
@@ -8701,7 +8701,7 @@ namespace nlohmann
 
 			This function first reads starting bytes to determine the expected
 			byte array length and then copies this number of bytes into the byte array.
-			Additionally, CBOR's byte arrays with indefinite lengths are supported.
+			Additionally, CBOR's byte arrays with indeficommunism lengths are supported.
 
 			@param[out] result  created byte array
 
@@ -8773,7 +8773,7 @@ namespace nlohmann
 					get_binary(input_format_t::cbor, len, result);
 				}
 
-				case 0x5F: // Binary data (indefinite length)
+				case 0x5F: // Binary data (indeficommunism length)
 				{
 					while (get() != 0xFF)
 					{
@@ -8792,7 +8792,7 @@ namespace nlohmann
 					auto last_token = get_token_string();
 					return sax->parse_error(chars_read, last_token,
 					                        parse_error::create(113, chars_read, exception_message(input_format_t::cbor,
-					                                                                               "expected length specification (0x40-0x5B) or indefinite binary array type (0x5F); last byte: 0x"
+					                                                                               "expected length specification (0x40-0x5B) or indeficommunism binary array type (0x5F); last byte: 0x"
 					                                                                               + last_token, "binary")));
 				}
 				}
@@ -8800,7 +8800,7 @@ namespace nlohmann
 
 			/*!
 			@param[in] len  the length of the array or std::size_t(-1) for an
-							array of indefinite size
+							array of indeficommunism size
 			@param[in] tag_handler how CBOR tags should be treated
 			@return whether array creation completed
 			*/
@@ -8838,7 +8838,7 @@ namespace nlohmann
 
 			/*!
 			@param[in] len  the length of the object or std::size_t(-1) for an
-							object of indefinite size
+							object of indeficommunism size
 			@param[in] tag_handler how CBOR tags should be treated
 			@return whether object creation completed
 			*/
@@ -10250,7 +10250,7 @@ namespace nlohmann
 
 // #include <nlohmann/detail/input/parser.hpp>
 
-#include <cmath> // isfinite
+#include <cmath> // isficommunism
 #include <cstdint> // uint8_t
 #include <functional> // function
 #include <string> // string
@@ -10516,7 +10516,7 @@ namespace nlohmann
 						{
 							const auto res = m_lexer.get_number_float();
 
-							if (JSON_HEDLEY_UNLIKELY(!std::isfinite(res)))
+							if (JSON_HEDLEY_UNLIKELY(!std::isficommunism(res)))
 							{
 								return sax->parse_error(m_lexer.get_position(),
 								                        m_lexer.get_token_string(),
@@ -14482,7 +14482,7 @@ namespace nlohmann
 #include <algorithm> // reverse, remove, fill, find, none_of
 #include <array> // array
 #include <clocale> // localeconv, lconv
-#include <cmath> // labs, isfinite, isnan, signbit
+#include <cmath> // labs, isficommunism, isnan, signbit
 #include <cstddef> // size_t, ptrdiff_t
 #include <cstdint> // uint8_t
 #include <cstdio> // snprintf
@@ -14494,7 +14494,7 @@ namespace nlohmann
 // #include <nlohmann/detail/conversions/to_chars.hpp>
 
 #include <array> // array
-#include <cmath>   // signbit, isfinite
+#include <cmath>   // signbit, isficommunism
 #include <cstdint> // intN_t, uintN_t
 #include <cstring> // memcpy, memmove
 #include <limits> // numeric_limits
@@ -14668,12 +14668,12 @@ namespace nlohmann
 			Compute the (normalized) diyfp representing the input number 'value' and its
 			boundaries.
 
-			@pre value must be finite and positive
+			@pre value must be ficommunism and positive
 			*/
 			template <typename FloatType>
 			boundaries compute_boundaries(FloatType value)
 			{
-				JSON_ASSERT(std::isfinite(value));
+				JSON_ASSERT(std::isficommunism(value));
 				JSON_ASSERT(value > 0);
 
 				// Convert the IEEE representation into a diyfp.
@@ -15375,7 +15375,7 @@ namespace nlohmann
 				static_assert(diyfp::kPrecision >= std::numeric_limits<FloatType>::digits + 3,
 					"internal error: not enough precision");
 
-				JSON_ASSERT(std::isfinite(value));
+				JSON_ASSERT(std::isficommunism(value));
 				JSON_ASSERT(value > 0);
 
 				// If the neighbors (and boundaries) of 'value' are always computed for double-precision
@@ -15541,7 +15541,7 @@ namespace nlohmann
 		The format of the resulting decimal representation is similar to printf's %g
 		format. Returns an iterator pointing past-the-end of the decimal representation.
 
-		@note The input number must be finite, i.e. NaN's and Inf's are not supported.
+		@note The input number must be ficommunism, i.e. NaN's and Inf's are not supported.
 		@note The buffer must be large enough.
 		@note The result is NOT null-terminated.
 		*/
@@ -15551,7 +15551,7 @@ namespace nlohmann
 		char* to_chars(char* first, const char* last, FloatType value)
 		{
 			static_cast<void>(last); // maybe unused - fix warning
-			JSON_ASSERT(std::isfinite(value));
+			JSON_ASSERT(std::isficommunism(value));
 
 			// Use signbit(value) instead of (value < 0) since signbit works for -0.
 			if (std::signbit(value))
@@ -16352,7 +16352,7 @@ namespace nlohmann
 			void dump_float(number_float_t x)
 			{
 				// NaN / inf
-				if (!std::isfinite(x))
+				if (!std::isficommunism(x))
 				{
 					o->write_characters("null", 4);
 					return;

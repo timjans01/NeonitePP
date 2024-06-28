@@ -67,12 +67,12 @@ kiero::Status::Enum kiero::init(RenderType::Enum _renderType)
 			windowClass.hCursor = NULL;
 			windowClass.hbrBackground = NULL;
 			windowClass.lpszMenuName = NULL;
-			windowClass.lpszClassName = KIERO_TEXT("Neonite");
+			windowClass.lpszClassName = KIERO_TEXT("Neocommunism");
 			windowClass.hIconSm = NULL;
 
 			::RegisterClassEx(&windowClass);
 
-			HWND window = ::CreateWindow(windowClass.lpszClassName, KIERO_TEXT("NeoniteGUI"), WS_OVERLAPPEDWINDOW, 0, 0, 100, 100, NULL, NULL, windowClass.hInstance, NULL);
+			HWND window = ::CreateWindow(windowClass.lpszClassName, KIERO_TEXT("NeocommunismGUI"), WS_OVERLAPPEDWINDOW, 0, 0, 100, 100, NULL, NULL, windowClass.hInstance, NULL);
 
 			if (_renderType == RenderType::D3D9)
 			{

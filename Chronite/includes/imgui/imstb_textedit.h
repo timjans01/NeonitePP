@@ -1222,7 +1222,7 @@ static void stb_text_undo(STB_TEXTEDIT_STRING* str, STB_TexteditState* state)
 		else {
 			int i;
 
-			// there's definitely room to store the characters eventually
+			// there's deficommunismly room to store the characters eventually
 			while (s->undo_char_point + u.delete_length > s->redo_char_point) {
 				// should never happen:
 				if (s->redo_point == STB_TEXTEDIT_UNDOSTATECOUNT)

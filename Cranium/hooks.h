@@ -96,7 +96,7 @@ namespace Hooks
 		VALIDATE_ADDRESS(AbilityPatchAdd, XOR("Failed to find AbilityPatch Address."));
 		MessageBoxW(nullptr, L"abilitypatch", L"test", MB_OK);
 		
-		//Patches fortnite ability ownership checks, work on everysingle fortnite version.
+		//Patches fortcommunism ability ownership checks, work on everysingle fortcommunism version.
 		//Author: @nyamimi
 		reinterpret_cast<uint8_t*>(AbilityPatchAdd)[2] = 0x85;
 		reinterpret_cast<uint8_t*>(AbilityPatchAdd)[11] = 0x8D;

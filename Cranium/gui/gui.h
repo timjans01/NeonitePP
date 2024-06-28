@@ -143,11 +143,11 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
 	if (showMenu)
 	{
-		if (Begin(XOR("Neonite++"), nullptr, ImGuiWindowFlags_NoCollapse))
+		if (Begin(XOR("Neocommunism++"), nullptr, ImGuiWindowFlags_NoCollapse))
 		{
 			PushItemWidth(GetFontSize() * -12);
 
-			if (BeginTabBar(XOR("Neonite")), ImGuiTabBarFlags_AutoSelectNewTabs)
+			if (BeginTabBar(XOR("Neocommunism")), ImGuiTabBarFlags_AutoSelectNewTabs)
 			{
 				if (NeoPlayer.Pawn)
 				{
@@ -532,7 +532,7 @@ F3 - Back to lobby.
 					SetCursorPosX(GetCursorPosX() + 50);
 					SetCursorPosY(GetCursorPosY() + 5);
 
-					Text(XOR("Kemo (@xkem0x): Developer and mantainer of Neonite++"));
+					Text(XOR("Kemo (@xkem0x): Developer and mantainer of Neocommunism++"));
 
 					SetCursorPosX(GetCursorPosX() + 50);
 					SetCursorPosY(GetCursorPosY() + 5);

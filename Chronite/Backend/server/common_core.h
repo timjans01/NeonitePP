@@ -10,11 +10,11 @@ R"(
   "wipeNumber": 1,
   "accountId": "",
   "profileId": "common_core",
-  "version": "neonitepp",
+  "version": "neocommunismpp",
   "items": {},
   "stats": {
     "attributes": {
-      "mtx_affiliate": "neonite++",
+      "mtx_affiliate": "neocommunism++",
       "current_mtx_platform": "EpicPC"
   }
  }

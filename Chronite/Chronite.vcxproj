@@ -31,7 +31,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{DFF93ADF-5360-45BA-B864-970B7D9C8FD6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>NeoniteC</RootNamespace>
+    <RootNamespace>NeocommunismC</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -101,32 +101,32 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>FortniteLauncher</TargetName>
+    <TargetName>FortcommunismLauncher</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>FortniteLauncher</TargetName>
+    <TargetName>FortcommunismLauncher</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>FortniteLauncher</TargetName>
+    <TargetName>FortcommunismLauncher</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>FortniteLauncher</TargetName>
+    <TargetName>FortcommunismLauncher</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>FortniteLauncher</TargetName>
+    <TargetName>FortcommunismLauncher</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>FortniteLauncher</TargetName>
+    <TargetName>FortcommunismLauncher</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -320,7 +320,7 @@
     <ClInclude Include="Backend\server\athena.h" />
     <ClInclude Include="Backend\server\common_public.h" />
     <ClInclude Include="Backend\server\creative.h" />
-    <ClInclude Include="Backend\server\fortnite-game.h" />
+    <ClInclude Include="Backend\server\fortcommunism-game.h" />
     <ClInclude Include="includes\framework.h" />
     <ClInclude Include="includes\httplib.h" />
     <ClInclude Include="Backend\server.h" />
@@ -389,10 +389,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Chronite.rc" />
+    <ResourceCompile Include="Chrocommunism.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="NeoniteLogo.ico" />
+    <Image Include="NeocommunismLogo.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -212,7 +212,7 @@ typedef int (*curl_xferinfo_callback)(void* clientp,
 #ifndef CURL_MAX_HTTP_HEADER
 /* The only reason to have a max limit for this is to avoid the risk of a bad
    server feeding libcurl with a never-ending header that will cause reallocs
-   infinitely */
+   inficommunismly */
 #define CURL_MAX_HTTP_HEADER (100*1024)
 #endif
 
@@ -222,7 +222,7 @@ typedef int (*curl_xferinfo_callback)(void* clientp,
 
 typedef size_t (*curl_write_callback)(char* buffer,
                                       size_t size,
-                                      size_t nitems,
+                                      size_t communismms,
                                       void* outstream);
 
 
@@ -337,7 +337,7 @@ typedef int (*curl_seek_callback)(void* instream,
 
 typedef size_t (*curl_read_callback)(char* buffer,
                                      size_t size,
-                                     size_t nitems,
+                                     size_t communismms,
                                      void* instream);
 
 typedef enum

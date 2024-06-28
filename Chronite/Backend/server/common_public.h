@@ -9,7 +9,7 @@ R"(
   "wipeNumber": 1,
   "accountId": "",
   "profileId": "common_public",
-  "version": "neonite++",
+  "version": "neocommunism++",
   "items": {},
   "stats": {
     "attributes": {

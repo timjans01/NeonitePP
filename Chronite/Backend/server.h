@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 #pragma once
 
@@ -14,7 +14,7 @@
 #include "server/common_public.h"
 #include "server/creative.h"
 #include "server/calendar.h"
-#include "server/fortnite-game.h"
+#include "server/fortcommunism-game.h"
 
 using namespace httplib;
 

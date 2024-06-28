@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020-2021 Kareem Olim (Kemo)
  * All Rights Reserved. Licensed under the Neo License
- * https://neonite.dev/LICENSE.html
+ * https://neocommunism.dev/LICENSE.html
  */
 
 #pragma once
@@ -483,7 +483,7 @@ struct AFortPawn_OnWeaponEquipped_Params
 	UObject* PrevWeapon;
 };
 
-struct UFortniteAutomationBlueprintLibrary_ApplyItemWrapToActor_Params
+struct UFortcommunismAutomationBlueprintLibrary_ApplyItemWrapToActor_Params
 {
 	UObject* wrap;
 	UObject* Actor;
@@ -527,14 +527,14 @@ struct FPlaylistPropertyArray
 	UObject* OverridePlaylist;
 };
 
-struct PlayerControllerBoolsForInfiniteAmmo
+struct PlayerControllerBoolsForInficommunismAmmo
 {
 	bool bEnableVoiceChatPTT : 1;
 	bool bVoiceChatPTTTransmit : 1;
-	bool bInfiniteAmmo : 1;
-	bool bInfiniteMagazine : 1;
+	bool bInficommunismAmmo : 1;
+	bool bInficommunismMagazine : 1;
 	bool bNoCoolDown : 1;
-	bool bInfiniteDurability : 1;
+	bool bInficommunismDurability : 1;
 	bool bUsePickers : 1;
 	bool bPickerOpen : 1;
 };
@@ -544,7 +544,7 @@ struct AFortGameStateAthena_OnRep_GamePhase_Params
 	EAthenaGamePhase OldGamePhase;
 };
 
-struct UFortGadgetItemDefinition_GetWeaponItemDefinition_Params
+struct UFortGadgetItemDefinition_GetWeapocommunismmDefinition_Params
 {
 	UObject* ReturnValue;
 };

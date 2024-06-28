@@ -13,7 +13,7 @@ inline void initStatics()
 		res.status = 204;
 	});
 
-	app.Get(R"(/fortnite/api/game/v2/grant_access/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/game/v2/grant_access/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
@@ -28,7 +28,7 @@ inline void initStatics()
 		res.status = 204;
 	});
 
-	app.Get(R"(/party/api/v1/Fortnite/user/(.*)/notifications/undelivered/count)", [](const Request& req, Response& res)
+	app.Get(R"(/party/api/v1/Fortcommunism/user/(.*)/notifications/undelivered/count)", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
@@ -38,7 +38,7 @@ inline void initStatics()
 		res.status = 204;
 	});
 
-	app.Get("/fortnite/api/game/v2/br-inventory/account/NeoniteUser", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/game/v2/br-inventory/account/NeocommunismUser", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
@@ -58,12 +58,12 @@ inline void initStatics()
 		res.status = 204;
 	});
 
-	app.Get(R"(/fortnite/api/cloudstorage/user/(.*)/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/cloudstorage/user/(.*)/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
 
-	app.Put(R"(/fortnite/api/cloudstorage/user/(.*)/(.*))", [](const Request& req, Response& res)
+	app.Put(R"(/fortcommunism/api/cloudstorage/user/(.*)/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
@@ -78,17 +78,17 @@ inline void initStatics()
 		res.status = 204;
 	});
 
-	app.Get(R"(/party/api/v1/Fortnite/parties/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/party/api/v1/Fortcommunism/parties/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
 
-	app.Delete(R"(/party/api/v1/Fortnite/parties/(.*))", [](const Request& req, Response& res)
+	app.Delete(R"(/party/api/v1/Fortcommunism/parties/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
 
-	app.Get(R"(/fortnite/api/game/v2/br-inventory/account/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/game/v2/br-inventory/account/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
@@ -98,7 +98,7 @@ inline void initStatics()
 		res.status = 204;
 	});
 
-	app.Get(R"(/fortnite/api/game/v2/matchmakingservice/ticket/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/game/v2/matchmakingservice/ticket/(.*))", [](const Request& req, Response& res)
 	{
 		res.status = 204;
 	});
@@ -115,17 +115,17 @@ inline void initStatics()
 		res.set_content("[]", "application/json");
 	});
 
-	app.Get("/fortnite/api/game/v2/enabled_features", [](const Request& req, Response& res)
+	app.Get("/fortcommunism/api/game/v2/enabled_features", [](const Request& req, Response& res)
 	{
 		res.set_content("[]", "application/json");
 	});
 
-	app.Get(R"(/fortnite/api/receipts/v1/account/(.*)/receipts)", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/receipts/v1/account/(.*)/receipts)", [](const Request& req, Response& res)
 	{
 		res.set_content("[]", "application/json");
 	});
 
-	app.Get(R"(/friends/api/v1/(.*)/recent/fortnite)", [](const Request& req, Response& res)
+	app.Get(R"(/friends/api/v1/(.*)/recent/fortcommunism)", [](const Request& req, Response& res)
 	{
 		res.set_content("[]", "application/json");
 	});
@@ -135,7 +135,7 @@ inline void initStatics()
 		res.set_content("[]", "application/json");
 	});
 
-	app.Get(R"(/fortnite/api/cloudstorage/user/(.*))", [](const Request& req, Response& res)
+	app.Get(R"(/fortcommunism/api/cloudstorage/user/(.*))", [](const Request& req, Response& res)
 	{
 		res.set_content("[]", "application/json");
 	});
